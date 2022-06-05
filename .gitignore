@@ -1,0 +1,7 @@
+# dependencies
+/node_modules
+
+# important
+config.js
+
+package-lock.json

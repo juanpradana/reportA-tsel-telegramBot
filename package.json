@@ -1,0 +1,23 @@
+{
+  "name": "reporta-tsel-telegrambot",
+  "version": "1.0.0",
+  "description": "Bot for report data on telkomsel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanpradana/reportA-tsel-telegramBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanpradana/reportA-tsel-telegramBot/issues"
+  },
+  "homepage": "https://github.com/juanpradana/reportA-tsel-telegramBot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.57.0",
+    "request": "^2.88.2"
+  }
+}
