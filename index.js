@@ -50,13 +50,14 @@ bot.on('message', (msg) => {
           const result = text.replace(/["{}\[\]]/g, '')
           .replace(/site_id:/g, '')
           final = result.replace(/,/g, "\n")
-          console.log(final.length)
           bot.sendMessage(msg.chat.id, final)
         })
+        setTimeout(() => {
+          bot.sendMessage(msg.chat.id, `Jumalah Site ID: ${data.length}`)
+        }, 5000);
       })
       .catch(function(err) {
         console.log(err)
-        bot.sendMessage(msg.chat.id, String(err))
       })
   }
 
@@ -68,13 +69,12 @@ bot.on('message', (msg) => {
         const data = dataJSON[0]
         const text = JSON.stringify(data)
         const result = String(text).replace(/,/g, '\n').replace(/[{}"]/g, '')
-        console.log(result.length)
         bot.sendMessage(msg.chat.id, result)
         bot.sendLocation(msg.chat.id, parseFloat(data.lat), parseFloat(data.long))
       })
       .catch(function(err) {
         console.log(err)
-        bot.sendMessage(msg.chat.id, String(err))
       })
   }
+  console.log(`Receive Message "${msg.text}" from [${msg.from.first_name}] | id: ${msg.from.id}`)
 });
