@@ -1,11 +1,11 @@
-const config = require('./config');
+const { config, TeleKey } = require('./config');
 const TelegramBot = require('node-telegram-bot-api');
 const fetch = require('node-fetch');
 
 const {
   tToken,
   url_data
-} = config.config;
+} = config;
 
 const chunk = (arr, size) =>
   Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
